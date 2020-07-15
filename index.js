@@ -8,3 +8,61 @@ const connection = mysql.createConnection({
     password: "rootroot",
     database: "employee_db",
 });
+
+connection.connect(function (err) {
+    if (err) throw err;
+});
+
+function start() {
+    inquirer.prompt({
+        name: "company",
+        type: "list",
+        message: "What would you like to do?",
+        choices: [
+            "View Departments",
+            "View Roles",
+            "View Employees",
+            "Add Department",
+            "Add Role",
+            "Add Employee",
+            "Update Employee Role",
+            "Exit"
+        ]
+    })
+        .then(answers => {
+            switch (answers.options) {
+                case "View Departments":
+                    viewDepartments();
+                    break;
+                case "View Roles":
+                    viewRoles();
+                    break;
+                case "View Employees":
+                    viewEmployees();
+                    break;
+                case "Add Department":
+                    addDepartment();
+                    break;
+                case "Add Role":
+                    addRole();
+                    break;
+                case "Add Employee":
+                    addEmployee();
+                    break;
+                case "Update Employee Role":
+                    updateEmployeeRole();
+                    break;
+                case "Exit":
+                    connection.end();
+                    break;
+            };
+        })
+};
+
+function viewDepartments() {
+    connection.query("SELECT * from department", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
