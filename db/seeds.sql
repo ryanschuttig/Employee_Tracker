@@ -15,10 +15,10 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-("Albus", "Dumbledore", 1, 3);
-("Harry", "Potter", 2, 2);
-("Hermione", "Granger", 3, 1);
-("Minerva", "McGonagall", 4, null);
-("Ron", "Weasley", 5, null);
-("Severus", "Snape", 6, null);
+("Albus", "Dumbledore", 1, 3),
+("Harry", "Potter", 2, 2),
+("Hermione", "Granger", 3, 1),
+("Minerva", "McGonagall", 4, null),
+("Ron", "Weasley", 5, null),
+("Severus", "Snape", 6, null),
 ("Rubeus", "Hagrid", 7, null);

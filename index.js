@@ -11,6 +11,7 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
+    start();
 });
 
 function start() {
@@ -60,7 +61,15 @@ function start() {
 };
 
 function viewDepartments() {
-    connection.query("SELECT * from department", (err, results) => {
+    connection.query("SELECT * FROM department", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
+
+function viewRoles() {
+    connection.query("SELECT roles.title, roles.salary, department.name", (err, results) => {
         if (err) throw err;
         console.table(results);
         start();
