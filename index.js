@@ -69,7 +69,47 @@ function viewDepartments() {
 };
 
 function viewRoles() {
-    connection.query("SELECT roles.title, roles.salary, department.name", (err, results) => {
+    connection.query("SELECT * FROM roles", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
+
+function viewEmployees() {
+    connection.query("SELECT * FROM employee", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
+
+function addDepartment() {
+    connection.query("", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
+
+function addRole() {
+    connection.query("", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
+
+function addEmployee() {
+    connection.query("", (err, results) => {
+        if (err) throw err;
+        console.table(results);
+        start();
+    })
+};
+
+function updateEmployeeRole() {
+    connection.query("", (err, results) => {
         if (err) throw err;
         console.table(results);
         start();
