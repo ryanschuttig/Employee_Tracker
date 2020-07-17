@@ -95,7 +95,7 @@ function addDepartment() {
                 },
                 (err, results) => {
                     if (err) throw err;
-                    console.log(`Added ${answers.newDepartment}`);
+                    console.table(results);
                     start();
                 })
         })
@@ -130,7 +130,7 @@ function addRole() {
 
                 (err, results) => {
                     if (err) throw err;
-                    console.log(`${answers.title} with a salary of $ ${answers.salary} has been added to the ${answers.departmentId}`);
+                    console.table(results);
                     start();
                 })
         })
