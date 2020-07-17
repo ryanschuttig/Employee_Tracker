@@ -51,9 +51,6 @@ function start() {
                 case "Add Employee":
                     addEmployee();
                     break;
-                case "Update Employee Role":
-                    updateEmployeeRole();
-                    break;
                 case "Exit":
                     exit();
                     break;
