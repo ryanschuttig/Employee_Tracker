@@ -4,9 +4,10 @@
   "description": "Design the following database schema containing three tables:",
   "main": "index.js",
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^7.3.2",
-    "nodemon": "^2.0.4",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {
