@@ -11,7 +11,7 @@
   ## Description
   This project will look up each department, role, position, and salary within a company.
   ## Installation
-  inquirer, mysql, cTable
+  npm i to install inquirer, mysql, cTable
   ## Questions
   If you have any questions, email me at ryanschuttig@gmail.com, or visit my GitHub page at https://github.com/ryanschuttig.
 
